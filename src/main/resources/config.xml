@@ -3,5 +3,31 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+    <bean name="employee1" class="com.demo.common.Employee">
+        <property name="fullName">
+            <value>Amit</value>
+        </property>
+        <property name="phones">
+            <list>
+                <value>98888826492</value>
+                <value>98888876862</value>
+                <value>9417394589</value>
+            </list>
+        </property>
+        <property name="address">
+            <set>
+                <value>Amritsar</value>
+                <value>Delhi</value>
+                <value>UP</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="Java" value="2 Months"/>
+                <entry key="SQL" value="1 Months"/>
+                <entry key="OOPS" value="1 Months"/>
+            </map>
+        </property>
+    </bean>
 
 </beans>
