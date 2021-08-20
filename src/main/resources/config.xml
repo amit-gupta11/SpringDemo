@@ -3,5 +3,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+<bean class="com.demo.common.B" name="bReference">
+    <property name="y">
+        <value>9</value>
+    </property>
+</bean>
+    <bean class="com.demo.common.A" name="aReference">
+        <property name="x">
+            <value>12</value>
+        </property>
+<!--        <property name="obj">-->
+<!--            <ref bean="bReference" />-->
+<!--        </property>-->
 
+        <property name="obj" ref="bReference"/>
+    </bean>
 </beans>
