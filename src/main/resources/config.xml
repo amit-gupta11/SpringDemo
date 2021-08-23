@@ -3,9 +3,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-<bean class="com.demo.common.Samosa" name="samosa1" init-method="init" destroy-method="destroy">
+<bean class="com.demo.common.Pepsi" name="pepsi1">
     <property name="price">
-        <value>10</value>
+        <value>20</value>
     </property>
 
 </bean>
