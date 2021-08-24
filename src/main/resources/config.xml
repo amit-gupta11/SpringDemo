@@ -1,7 +1,25 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+<util:list list-class="java.util.LinkedList" id="myFriends">
+    <value>Amit</value>
+    <value>Shubham</value>
+    <value>Amrit</value>
+    <value>Kajal</value>
+</util:list>
+    <util:map map-class="java.util.LinkedHashMap" id="fees">
+        <entry key="Spring Framework" value="8000"></entry>
+        <entry key="Jango Framework" value="5000"></entry>
+        <entry key="Hibernate Framework" value="2000"></entry>
+        <entry key="Maven Framework" value="1000"></entry>
+    </util:map>
+<bean class="com.demo.common.Person" name="person1">
+    <property name="friends" ref="myFriends"/>
+    <property name="feeStructure" ref="fees"/>
+</bean>
 
 </beans>
